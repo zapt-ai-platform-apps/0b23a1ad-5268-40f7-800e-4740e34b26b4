@@ -29,7 +29,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-indigo-950/90 backdrop-blur-md border-b border-indigo-800/50 shadow-lg z-50">
+    <nav className="bg-indigo-950/95 backdrop-blur-md border-b border-indigo-800/50 shadow-lg z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -39,7 +39,7 @@ const Navbar = () => {
                 alt="Logo" 
                 className="h-8 w-auto mr-2"
               />
-              <span className="font-bold text-lg text-indigo-300">The Secret Super App</span>
+              <span className="font-bold text-lg text-white drop-shadow-md">The Secret Super App</span>
               <FaRocket className="ml-2 text-yellow-300" />
             </Link>
           </div>
@@ -51,8 +51,8 @@ const Navbar = () => {
                 to={item.path}
                 className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${
                   activePage === item.path
-                    ? 'text-yellow-300 bg-indigo-800/70'
-                    : 'text-indigo-200 hover:text-yellow-200 hover:bg-indigo-800/50'
+                    ? 'text-yellow-300 bg-indigo-800/90'
+                    : 'text-white hover:text-yellow-200 hover:bg-indigo-800/70'
                 } transition-colors duration-200`}
                 onClick={() => navigateTo(item.path)}
               >
@@ -65,7 +65,7 @@ const Navbar = () => {
           <div className="flex items-center md:hidden">
             <button
               onClick={toggleMenu}
-              className="p-2 rounded-md text-indigo-200 hover:text-white focus:outline-none cursor-pointer"
+              className="p-2 rounded-md text-white hover:text-yellow-200 focus:outline-none cursor-pointer"
             >
               {isMenuOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
             </button>
@@ -83,8 +83,8 @@ const Navbar = () => {
                 to={item.path}
                 className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${
                   activePage === item.path
-                    ? 'text-yellow-300 bg-indigo-800/70'
-                    : 'text-indigo-200 hover:text-yellow-200 hover:bg-indigo-800/50'
+                    ? 'text-yellow-300 bg-indigo-800/90'
+                    : 'text-white hover:text-yellow-200 hover:bg-indigo-800/70'
                 } transition-colors duration-200`}
                 onClick={() => {
                   navigateTo(item.path);

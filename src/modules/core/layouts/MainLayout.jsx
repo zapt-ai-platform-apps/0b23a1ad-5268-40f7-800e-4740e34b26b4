@@ -39,16 +39,8 @@ const MainLayout = () => {
           />
         ))}
         
-        {/* Animated background nebula effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/10 to-blue-900/10" />
-        
-        {/* Cosmic dust */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.15), transparent 40%)'
-          }}
-        />
+        {/* Cleaner gradient background for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/80 via-purple-900/70 to-blue-900/80" />
       </div>
       
       {navigationVisible && <Navbar />}

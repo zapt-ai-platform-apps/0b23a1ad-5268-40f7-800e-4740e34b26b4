@@ -36,6 +36,9 @@ function App() {
               />
             ))}
             
+            {/* Gradient overlay for better text contrast */}
+            <div className="absolute inset-0 bg-gradient-to-b from-indigo-900/50 to-blue-900/70 z-0"></div>
+            
             {/* Planets */}
             <div 
               className="planet"
