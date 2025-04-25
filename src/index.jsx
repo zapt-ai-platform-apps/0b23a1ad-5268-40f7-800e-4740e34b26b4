@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import App from './app/App';
 import './index.css';
 import * as Sentry from '@sentry/browser';
 
@@ -18,9 +18,9 @@ Sentry.init({
 // Add PWA support
 window.progressierAppRuntimeSettings = {
   uid: import.meta.env.VITE_PUBLIC_APP_ID,
-  icon512: "https://supabase.zapt.ai/storage/v1/render/image/public/icons/c7bd5333-787f-461f-ae9b-22acbc0ed4b0/55145115-0624-472f-96b9-d5d88aae355f.png?width=512&height=512",
-  name: 'New App',
-  shortName: 'New App',
+  icon512: "https://supabase.zapt.ai/storage/v1/render/image/public/icons/0b23a1ad-5268-40f7-800e-4740e34b26b4/efd69603-871a-4108-97ad-f49b7efbcc9f.png?width=512&height=512",
+  name: 'The secret super app',
+  shortName: 'The secret s',
 };
 
 let progressierScript = document.createElement('script');

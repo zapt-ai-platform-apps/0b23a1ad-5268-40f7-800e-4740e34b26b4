@@ -1,3 +1,99 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-primary: #8A2BE2;
+  --color-primary-dark: #6A1CB2;
+  --color-secondary: #FFD700;
+  --color-secondary-dark: #DAA520;
+  --color-tertiary: #4B0082;
+  --color-background: #F8F4FF;
+  --color-text: #333333;
+  --color-text-light: #666666;
+}
+
+body {
+  @apply font-sans text-gray-800 bg-gradient-to-b from-purple-50 to-purple-100 min-h-screen;
+  color: var(--color-text);
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 ease-in-out inline-flex items-center justify-center cursor-pointer;
+}
+
+.btn-primary {
+  @apply bg-purple-600 hover:bg-purple-700 text-white shadow-md hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply bg-yellow-400 hover:bg-yellow-500 text-gray-800 shadow-md hover:shadow-lg;
+}
+
+.btn-outline {
+  @apply border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-md p-4 transition-all duration-200 ease-in-out;
+}
+
+.card-hover {
+  @apply hover:shadow-lg;
+}
+
+.input {
+  @apply w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none box-border;
+}
+
+.textarea {
+  @apply w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none resize-none box-border;
+}
+
+/* Custom scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a855f7;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9333ea;
+}
+
+/* CSS Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
